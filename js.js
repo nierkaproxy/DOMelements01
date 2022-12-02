@@ -16,7 +16,7 @@ import allCountries from './data.js';
 
 
 const my_main_div = document.getElementById('main_div');
-const headeris = document.getElementById('headeris')
+
 
 
 allCountries.map((country, index)=>{
@@ -24,7 +24,7 @@ allCountries.map((country, index)=>{
     console.log(`Country name: ${country.name.common}`);
     console.log(`Continent: ${country.continents}`);
 
-
+    
     const naujas_divas = document.createElement('div');
     const my_country_name = document.createElement('h2');
     const my_flags = document.createElement('img');
@@ -34,7 +34,6 @@ allCountries.map((country, index)=>{
     const my_currency = document.createElement('h4');
     const lang_title = document.createElement('h3');
     const country_borders_name = document.createElement('h4');
-    const buttonas = document.createElement('button');
 
     
     my_country_region.setAttribute("class", "continent");
@@ -124,6 +123,20 @@ allCountries.map((country, index)=>{
         naujas_divas.append(country_borders)
     }
     
+
     my_main_div.appendChild(naujas_divas);
-    console.log("********************************")
+    console.log("********************************");
 })
+// const buttonai = document.querySelector('header')
+
+
+// const getCountry = () => {
+//     if(buttonai == "Africa"){
+        
+//     }
+// }
+
+// buttonai.addEventListener('click', getCountry)
+
+// naudoti includes del buttonu, ir ne i hardkodinti
+

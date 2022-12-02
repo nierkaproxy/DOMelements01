@@ -69,3 +69,8 @@ p{
    
     font-family: 'Raleway', sans-serif;
 }
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
