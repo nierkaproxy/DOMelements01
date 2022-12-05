@@ -1,24 +1,13 @@
 import allCountries from './data.js';
-// console.log(allCountries);
-
-
-// for(let i = 0; i <= 249; i++){
-//     console.log(`${i +1} data:`)
-//     console.log(`Country name: ${allCountries[i].name.common}`)
-
-//     if(!allCountries[i].capital){
-//     console.log("Data about capital not found...")
-//     console.log("*************************************")
-// }else{
-//     console.log(`Capital: ${allCountries[i].capital[0]}`)
-//     console.log("*************************************")
-// }}
 
 
 const my_main_div = document.getElementById('main_div');
-const continents_buttons = document.querySelector('header')
-const meniu = ['all'];
 
+// i index.html isihard-kodinu header elementa ir pasiselectinu cia 
+const continents_buttons = document.querySelector('header')
+// susikuriu tuscia masyva su stringu 'all'
+const meniu = ['all'];
+// toliau 120 eilute
 
 allCountries.map((country, index) => {
     console.log(index + 1);
@@ -128,14 +117,17 @@ allCountries.map((country, index) => {
     }
 
 
+    // i tuscia masyva pushinu unikalius kontinentus
     if (!meniu.includes(country.continents[0])) {
         meniu.push(country.continents[0]);
     }
+    //toliau 130 eilute
 
     my_main_div.appendChild(naujas_divas);
     console.log("********************************");
 })
 
+// pas mane visi kontinentai kortelese yra h5 elementai, tai visus juos pasiselectinu
 const card_continents = document.querySelectorAll('h5');
 const my_buttons = document.getElementsByTagName('button');
 
